@@ -1,0 +1,7 @@
+<div *ngIf="loading$ | async">Loading...</div>
+<div *ngIf="error$ | async as error">{{ error }}</div>
+<div *ngFor="let profile of profiles$ | async">
+  {{ profile.name }} - {{ profile.age }}
+</div>
+<button (click)="addNewItem()">Add</button>
+<button (click)="deleteItem()">Delete</button>
